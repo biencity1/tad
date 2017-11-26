@@ -25,7 +25,6 @@ const MainPage = () => {
             <Footer />
         </div>
 
-
     );
 };
 
