@@ -17,9 +17,13 @@ body {
     outline:0;
     text-decoration: none;
     color: #212121;
+    margin:0;
+    padding:0;
 }
 
-
+ul>li{
+  list-style: none;
+}
 
 @media (max-width: 767px) {
   html {
@@ -29,3 +33,4 @@ body {
   
     
 }
+

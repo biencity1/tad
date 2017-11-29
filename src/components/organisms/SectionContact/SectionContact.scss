@@ -1,0 +1,43 @@
+@import 'utils';
+
+.section_contact {
+  @include responsive();
+  text-align: center;
+  margin: 10rem auto;
+  background: #fff;
+  h1{
+    margin:3rem auto ;
+  }
+
+  .contact_container{
+    text-align: initial;
+    display: flex;
+
+    .map_area {
+      width:50%;
+      background: #ddd;
+      height: 30rem;
+      padding:10rem;
+    }
+
+    .contact_from{
+      padding-left:2rem;
+
+      span{
+        margin-top:1rem;
+      }
+
+    }
+
+
+  }
+
+
+
+
+
+  form * {
+    display: block;
+  }
+
+}

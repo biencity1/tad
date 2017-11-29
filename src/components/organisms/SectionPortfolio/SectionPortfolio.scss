@@ -1,0 +1,24 @@
+@import 'utils';
+
+.section_portfolio{
+  
+
+  background: #fff;
+  
+  
+  
+  margin: 3rem auto 5rem;
+  
+  .responsive{
+    @include responsive();
+    h1{
+      text-align: center;
+    }
+  
+  }
+  
+  
+
+
+
+}

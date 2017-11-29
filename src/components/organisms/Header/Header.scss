@@ -1,0 +1,50 @@
+@import 'utils';
+
+.header {
+  background: #000;
+
+  .responsive{
+    @include responsive();
+  
+
+  
+    display: flex; 
+    height: 4rem;
+    align-items: center;
+
+    .logo {
+      height: 50%;
+      width: 20%;
+      a {
+        color:#ddd;
+        font-weight: 600;
+        
+        img {
+          display: block;
+          width:3rem;
+        }
+      }
+      
+      
+    }
+
+    .nav {
+      margin-left: auto;
+      font-weight: 400;
+    }
+
+    ul li {
+      
+      float : left;
+      padding: 0 2rem;
+      a {
+        color:#ddd;
+        font-weight: 600;
+         
+        
+      }
+      
+    }
+  }
+
+}

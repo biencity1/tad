@@ -1,0 +1,15 @@
+
+
+
+// Device scopes
+//  - Mobile viewport  :  -   ~ 767  px  using (<medium)
+//  - Tablet viewport  : 768  ~ 1023 px  using (<large)
+//  - Desktop viewport : 1024 ~  -   px  default
+
+$breakpoints: (
+  small: 376px, 
+  medium: 768px, 
+  large: 1024px, 
+  huge: 1080px
+);
+

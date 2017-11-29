@@ -1,0 +1,29 @@
+@mixin responsive(){
+  max-width: 1080px;
+  margin : 0 auto;
+  transition: width .3s ease-in-out;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @include media("<huge"){
+    width: 1024px;
+  }
+  @include media("<large"){
+    width: 100%;
+  }
+}
+
+@mixin col-6(){
+  width: 50%;
+  transition: width .3s ease-in-out;
+  @include media("<huge"){
+    width: 50%;
+  }
+  @include media("<large"){
+    width: 100%;
+  }
+}
+
+[class*="col-"] {
+  float: left;
+}
+

@@ -1,0 +1,31 @@
+@import 'utils';
+
+.section_partners {
+  margin:5rem auto;
+  text-align: center;
+  background:#fff;
+  @include responsive();
+
+  h1 {
+    margin:10rem auto 1rem;
+  }
+  .main_partner{
+    margin:0 auto;
+    width:20rem;
+    img{
+      width: 100%;
+    }
+  }
+  .partners{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    img{
+      width: 10rem;
+      height:10rem;
+      padding:2rem;
+    }
+  }
+
+
+}

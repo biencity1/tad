@@ -1,13 +1,22 @@
 import React from 'react';
 import styles from './Footer.scss';
 import classNames from 'classnames/bind';
+import ScrollableAnchor,{ goToTop } from 'react-scrollable-anchor';
 
 const cx = classNames.bind(styles);
 
 const Footer = () => {
   return(
     <div className={cx('footer')}>
-      © Toward A Dream. All Rights Reserved.
+      
+      <div className={cx('crop')}>
+        <div className={cx('bottom_line_remover')}></div>
+        <img src="./images/diagonal_line.svg" alt="" />
+        
+      </div>
+      <span>© Toward A Dream. All Rights Reserved.</span>
+      
+
     </div>
   );
 }

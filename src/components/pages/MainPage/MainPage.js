@@ -1,6 +1,10 @@
 import React from 'react';
+import styles from './MainPage.scss';
+import classNames from 'classnames/bind';
 import { Header, Footer, SectionMain, SectionAbout, SectionPartners, SectionContact, SectionPortfolio } from 'components';
 
+
+const cx = classNames.bind(styles);
 
 const MainPage = () => {
     return (
@@ -13,14 +17,15 @@ const MainPage = () => {
         //     >
         // </SylicTemplate>
 
-        <div>
+        <div className={cx('wrapper')}>
             <Header />
 
-                <SectionMain />
-                <SectionAbout />
-                <SectionPartners />
-                <SectionContact />
-                <SectionPortfolio />
+            <SectionMain />
+            <SectionAbout />
+            <SectionPartners />
+            <SectionPortfolio />
+            <SectionContact />
+
 
             <Footer />
         </div>

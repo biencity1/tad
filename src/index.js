@@ -2,6 +2,7 @@
 import 'react-hot-loader/patch'
 import React from 'react'
 import { render } from 'react-dom'
+import 'styles/main.scss'
 import { BrowserRouter } from 'react-router-dom'
 
 
