@@ -5,8 +5,8 @@
   text-align: center;
   span{
     @include responsive();
-    color: #fff;
-    
+    color: #e9ecef;
+    font-size: 0.8rem;
     padding-bottom:2rem;
     display: block;
   }

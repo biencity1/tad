@@ -1,5 +1,7 @@
 @import 'utils';
 
+
+
 .section_portfolio{
   
 
@@ -13,6 +15,7 @@
     @include responsive();
     h1{
       text-align: center;
+      margin: 10rem auto 5rem;
     }
   
   }

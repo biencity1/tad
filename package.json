@@ -103,5 +103,6 @@
   },
   "main": "index.js",
   "author": "Owen Park",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/biencity1/tad.git"
 }

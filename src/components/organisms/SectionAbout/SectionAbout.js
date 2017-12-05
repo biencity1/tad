@@ -38,7 +38,7 @@ const SectionAbout = () =>{
         </span>
         
       </div>
-
+      <div className={cx('tri')}></div>
       <h1>STRONG POINT</h1>    
       <div className={cx('strong_point')}>
           
