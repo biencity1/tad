@@ -1,0 +1,61 @@
+@import 'utils';
+
+
+
+.section_portfolio{
+  
+  width:100%;
+  background: #fff;
+  
+  
+  
+  margin: 3rem auto 5rem;
+  
+  h1{
+      text-align: center;
+      margin: 10rem auto 5rem;
+  }
+  
+  .portfolio_frame {
+    
+    display:flex;
+    flex-wrap: wrap;
+
+    .pf_item{
+      width:25%;
+      position:relative;
+      display: inline-flex;
+      img { width:100%;}
+      p {
+        position: absolute;
+        bottom: 5rem;
+        left: 2rem;
+        color: #fff;
+        font-weight: 500;
+        @include text-shadow(2);
+        z-index:11;
+      }
+
+      &.test {
+        &:after{
+          background-color: rgba(0,173,239,0.75);
+          content:" b";
+          position:absolute;
+          width:100%;
+          height:100%;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+        
+      }
+
+    }
+
+  }
+  
+  
+
+
+
+}

@@ -11,7 +11,8 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link rel="stylesheet" href="%PUBLIC_URL%/carousel.min.css"/>
-      
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />   
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -44,12 +45,45 @@
     -->
     <script type="text/javascript">
         var map = null;
-
+        var marker = null;
         function initMap() {
             map = new naver.maps.Map('map', {
-                center: new naver.maps.LatLng(37.3595704, 127.105399),
-                zoom: 10
+                center: new naver.maps.LatLng(37.5644806, 126.9232350),
+                zoom: 11,
+
             });
+        
+            marker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(37.5644806, 126.9232350),
+                map: map
+            });
+
+                        
+            var contentString = [
+                    '<div class="iw_inner">',
+                    '   <h4>TAD</h4>',
+                    '   <p>서울특별시 마포구 연남동 240-64<br />',
+                    // '   서울특별시 마포구 성미산로 151-1 ',
+                    // '       <img src="./images/hi-seoul.jpg" width="55" height="55" alt="" class="thumb" />',
+                    '   </p>',
+                    '</div>'
+                ].join('');
+
+            var infowindow = new naver.maps.InfoWindow({
+                content: contentString
+            });
+
+            naver.maps.Event.addListener(marker, "click", function(e) {
+                if (infowindow.getMap()) {
+                    infowindow.close();
+                } else {
+                    infowindow.open(map, marker);
+                }
+            });
+
+            infowindow.open(map, marker);
+
+
         }
     </script>
 

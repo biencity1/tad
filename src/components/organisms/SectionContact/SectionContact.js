@@ -20,29 +20,48 @@ const SectionContact = () => {
 
 
         <div className={cx('contact_container')}>
-          <div className={cx('map_area')}>
-              
-            <h3>TAD</h3>
-          
-            <span>4F,240-64, YEONNANDONG MAPOGU, SEOUL</span> 
+          <div className={cx('map_area_img')}>
+            <div className={cx('info')}>
+              <h3>TAD</h3>
+              <span>4F,240-64, YEONNANDONG MAPOGU, SEOUL</span> 
+            </div>
+            
           </div>
           <div className={cx('contact_from')}>
             
             <span>메세지 남겨주시면 연락드리겠습니다.</span> 
-            <form action="">
-              <span>Name</span>
+            
+            <div className={cx('input_frame')}>
               <input type="name" />
-              <span>Phone Number</span>
-              <input type="phone" />
-              <span>E-mail</span>
-              <input type="email" />
-              <span>Message</span>
-              <textarea name="comment" id="" cols="40" rows="6"></textarea>
-              <span>
-              <button>작성 완료</button>
-              </span>
+              <div className={cx('place_holder')}>
+                Name
+              </div>
+              <div className={cx('form_border_bottom')}></div>
+            </div>
               
-            </form>
+            <div className={cx('input_frame')}>
+              <input type="phone" />
+              <div className={cx('place_holder')}>
+                Phone Number
+              </div>
+              <div className={cx('form_border_bottom')}></div>
+            </div>
+
+            <div className={cx('input_frame')}>
+              <input type="email" />
+              <div className={cx('place_holder')}>
+                E-mail
+              </div>
+              <div className={cx('form_border_bottom')}></div>
+            </div>
+
+            <div className={cx('input_frame')}>
+              <textarea name="comment" id="" cols="40" rows="6" placeholder="Message"></textarea>
+              <span><button>작성 완료</button></span>
+            </div>
+              
+              
+            
 
           </div>
 

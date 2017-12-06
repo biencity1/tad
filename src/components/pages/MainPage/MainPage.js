@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './MainPage.scss';
 import classNames from 'classnames/bind';
-import { Header, Footer, SectionMain, SectionAbout, SectionPartners, SectionContact, SectionPortfolio } from 'components';
+import { Header, Footer, SectionMain, SectionAbout, SectionPartners, SectionContact, SectionPortfolio, SectionPortfolio1 } from 'components';
 
 
 const cx = classNames.bind(styles);
@@ -24,6 +24,7 @@ const MainPage = () => {
             <SectionAbout />
             <SectionPartners />
             <SectionPortfolio />
+            <SectionPortfolio1 />
             <SectionContact />
 
 
