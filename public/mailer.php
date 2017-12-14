@@ -34,7 +34,7 @@ $message = $data->form_msg;
   // }
 
   // Set the recipient email address.
-  $recipient = "biencity@gmail.com";
+  $recipient = "pkuyoon@gmail.com";
   // Set the email subject.
   $subject = "[TAD]".$name ."님의 홈페이지 문의 접수";
 

@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 const SectionPortfolio = () => {
   return(
     <div className={cx('section_portfolio')}>
-      {/* <ScrollableAnchor id={'portfolio'}><div></div></ScrollableAnchor> */}
+      <ScrollableAnchor id={'portfolio'}><div></div></ScrollableAnchor>
       
         <h1>PORTFOLIO</h1>
 
@@ -49,7 +49,8 @@ const SectionPortfolio = () => {
           <div className={cx('pf_item')}>
             <img src="/images/slider05.jpg" />
             <p className="legend">
-              Legend 
+            왕홍 브랜드 PPL <br />
+화장품매장 바이럴마케팅
             </p>
           </div>
           <div className={cx('pf_item')}>
@@ -69,7 +70,7 @@ const SectionPortfolio = () => {
             </p>
           </div>
           <div className={cx('pf_item','test')}>
-            <img src="/images/slider07.jpg" />
+            <img src="/images/slider08.jpg" />
             <p className="legend">
             왕홍 브랜드 PPL<br />
             중국 기업행사 참여
