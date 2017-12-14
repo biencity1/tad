@@ -31,7 +31,7 @@ const SectionContact = () => {
           <div className={cx('contact_from')}>
             
             <span>메세지 남겨주시면 연락드리겠습니다.</span> 
-            
+{/*             
             <div className={cx('input_frame')}>
               <input type="name" />
               <div className={cx('place_holder')}>
@@ -60,13 +60,13 @@ const SectionContact = () => {
               <textarea name="comment" id="" cols="40" rows="6" placeholder="Message"></textarea>
               <span><button>작성 완료</button></span>
             </div>
+               */}
               
-              
-            
+              <Contact />
 
           </div>
 
-            <Contact />
+            
 
 
 

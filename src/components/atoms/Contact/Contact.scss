@@ -1,41 +1,8 @@
 @import 'utils';
 
-.section_contact {
-  @include responsive();
-  text-align: center;
-  margin: 10rem auto;
-  background: #fff;
-  h1{
-    margin:3rem auto ;
-  }
-
-  .contact_container{
-    text-align: initial;
-    display: flex;
-    margin: 3rem 0;
-    padding: 0 1rem;
-    .map_area_img {
-      width:30%;
-      background: url('static/images/contact_bg.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 15rem;
-      padding:4rem;
-      .info {
-        font-size: 0.7rem;
-        background: rgba(0,0,0,0.7);
-        padding:2rem;
-        * {
-          color:#f9f9f9;
-        }
-        
-      }
+    .contact_form{
       
-    }
-
-    .contact_from{
-      padding-left:4rem;
-      width: 70%;
+      width: 100%;
       .input_frame {
         width: 90%;
         display: flex;
@@ -63,22 +30,29 @@
 
       .form_border_bottom {
         background-color: rgba(0,0,0,0.12);
-        bottom: -2px;
+        bottom: 3px;
         height: 1px;
-        left: 0;
+        left: 8rem;
         margin: 0;
         padding: 0;
         position: absolute;
-        width: 100%;
+        width: 76%;
       }
 
       textarea {
         height: 6.5rem;
         margin-top:1rem;
         width:80%;
+        padding:0.3rem;
+        font-size: 1rem;
+        &::placeholder{
+          color:rgba(0,0,0,0.38);
+          font-family: initial;
+          font-weight: bold;
+        }
       }
 
-      button {
+      .btn_submit {
         @include material-shadow(2);
         position: absolute;
         top: 0;
@@ -87,7 +61,8 @@
         left: 0;
         background-color: $primary-color;
         padding: 1rem;
-        width:4rem;
+        width:8rem;
+        height: 4rem;
         margin:2rem;
         color:#fff;
         -webkit-user-select: none;
@@ -113,10 +88,31 @@
     }
 
 
+  
+
+
+  input {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    background-color: transparent;
+    border: none;
+    display: block;
+    font: 400 17px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    height: 32px;
+    line-height: 32px;
+    padding-top: 0.6rem;
+    margin-left:8rem;
+    min-width: 0%;
+    outline: none;
+    padding: 0;
+    z-index: 0;
+
+
   }
-
-
-
 
 
 
@@ -124,4 +120,3 @@
     display: block;
   }
 
-}
