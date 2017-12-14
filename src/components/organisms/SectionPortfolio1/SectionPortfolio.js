@@ -3,7 +3,7 @@ import styles from './SectionPortfolio.scss';
 import classNames from 'classnames/bind';
 import ScrollableAnchor from 'react-scrollable-anchor';
 // import { Carousel } from 'react-responsive-carousel';
-import {Slider} from 'components';
+
 
 const cx = classNames.bind(styles);
 

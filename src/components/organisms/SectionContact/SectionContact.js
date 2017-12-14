@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './SectionContact.scss';
 import classNames from 'classnames/bind';
 import ScrollableAnchor,{ goToTop } from 'react-scrollable-anchor';
-import {NaverMap} from 'components';
+import {NaverMap, Contact} from 'components';
+
 
 const cx = classNames.bind(styles);
 
@@ -64,6 +65,10 @@ const SectionContact = () => {
             
 
           </div>
+
+            <Contact />
+
+
 
           </div>
         </div>
