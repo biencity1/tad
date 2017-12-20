@@ -31,6 +31,9 @@
       height:1px;
       margin-bottom:1px;
       background: #000;
+      @include media("<medium"){
+        display:none;
+      }
     }
   }
 

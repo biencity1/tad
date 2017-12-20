@@ -14,6 +14,10 @@
     display: flex;
     margin: 3rem 0;
     padding: 0 1rem;
+    @include media("<medium"){
+      flex-direction: column;
+      margin-top:1rem;
+    }
     .map_area_img {
       width:30%;
       background: url('static/images/contact_bg.jpg');
@@ -21,10 +25,20 @@
       background-position: center;
       height: 15rem;
       padding:4rem;
+      @include media("<medium"){
+        width:100%;
+        padding:0;
+
+      }
       .info {
         font-size: 0.7rem;
         background: rgba(0,0,0,0.7);
         padding:2rem;
+        @include media("<medium"){
+          position: absolute;
+          bottom:0;
+          width:100%;
+        }
         * {
           color:#f9f9f9;
         }
@@ -36,6 +50,13 @@
     .contact_from{
       padding-left:4rem;
       width: 70%;
+      @include media("<medium"){
+        width:100%;
+        margin-top:1rem;
+        padding:0;
+        
+        
+      }
       .input_frame {
         width: 90%;
         display: flex;

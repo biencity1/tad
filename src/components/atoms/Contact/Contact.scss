@@ -8,6 +8,12 @@
         display: flex;
         position:relative;        
         height: 2rem;
+        @include media("<medium"){
+          width:100%;
+          flex-wrap: wrap;
+          height:auto;
+          justify-content: space-around;
+        }
       }
 
       .place_holder {
@@ -37,6 +43,9 @@
         padding: 0;
         position: absolute;
         width: 76%;
+        @include media ("<medium"){
+          width: 68%;
+        }
       }
 
       textarea {
@@ -49,6 +58,9 @@
           color:rgba(0,0,0,0.38);
           font-family: initial;
           font-weight: bold;
+        }
+        @include media("<medium"){
+          width:100%;
         }
       }
 

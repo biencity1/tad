@@ -13,6 +13,7 @@
 
     .title{
       @include text-shadow(4);
+
       color:#888;
       font-size: 4rem;
       font-weight: 600;
@@ -23,6 +24,11 @@
       text-align: center;
       strong{
         color: #fff;
+      }
+      @include media("<medium"){
+        font-size: 3rem;
+        letter-spacing: 0.6rem;
+        margin-bottom:2rem;
       }
     }
       
@@ -45,6 +51,12 @@
     font-weight: 300;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.6);
+
+    @include media("<medium"){
+      width:80%;
+      bottom:9rem;
+    }
+
     }
 
   }
