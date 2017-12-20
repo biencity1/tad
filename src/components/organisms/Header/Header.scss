@@ -32,6 +32,8 @@
       
     }
 
+
+
     .nav {
       margin-left: auto;
       font-weight: 400;
@@ -169,6 +171,18 @@
 
 
 
+  }
+
+
+  .gotoTop {
+    position:fixed;
+    background:#fff;
+    font-size:1rem;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    z-index: 999;
   }
 
 }

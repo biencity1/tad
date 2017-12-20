@@ -21,47 +21,12 @@ const Slider = () => {
     <div className={cx('slider_container')}>
       <SlickSlider {...settings}>
         <div>
-          <img src="/images/slider01.jpg" />
+          <img src="/images/slider01.jpg" alt="aaa" />
           <p className="legend">
             Legend 
           </p>
         </div>
-        <div>
-          <img src="/images/slider02.jpg" />
-          <p className="legend">
-            Legend 
-          </p>
-        </div>
-        <div>
-          <img src="/images/slider03.jpg" />
-          <p className="legend">
-            Legend 
-          </p>
-        </div>
-        <div>
-          <img src="/images/slider04.jpg" />
-          <p className="legend">
-            Legend 
-          </p>
-        </div>
-        <div>
-          <img src="/images/slider05.jpg" />
-          <p className="legend">
-            Legend 
-          </p>
-        </div>
-        <div>
-          <img src="/images/slider06.jpg" />
-          <p className="legend">
-            Legend 
-          </p>
-        </div>
-        <div>
-          <img src="/images/slider07.jpg" />
-          <p className="legend">
-            Legend 
-          </p>
-        </div>
+        
       </SlickSlider>
     </div>
   );

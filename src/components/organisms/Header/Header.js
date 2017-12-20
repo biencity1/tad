@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from './Header.scss';
 import classNames from 'classnames/bind';
 import { removeHash, goToTop } from 'react-scrollable-anchor';
-import { NavBtn } from 'components';
+// import { NavBtn } from 'components';
 
 const cx = classNames.bind(styles);
 removeHash();
@@ -52,6 +52,9 @@ class Header extends Component {
           
         </div>
         
+        <a href="/#" onClick={goToTop} className={cx('gotoTop')}>
+          <div> TOP </div>
+        </a>
         
       
       </div>

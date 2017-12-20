@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 import styles from './Contact.scss';
 import classNames from 'classnames/bind';
@@ -13,7 +13,9 @@ class Contact extends React.Component {
       contactName: '',
       contactPhoneNum:'',
       contactEmail: '',
-      contactMessage: ''
+      contactMessage: '',
+      classState:'',
+      focusedForm:''
     };
 
     this._handleSubmit = this._handleSubmit.bind(this);
@@ -21,7 +23,19 @@ class Contact extends React.Component {
     this._handleChangePhone = this._handleChangePhone.bind(this);
     this._handleChangeEmail = this._handleChangeEmail.bind(this);
     this._handleChangeMsg = this._handleChangeMsg.bind(this);
+    this._onFocus = this._onFocus.bind(this); 
   }
+
+  _onFocus(e){
+    this.setState({
+      focusedForm: e.target.id,
+    });
+    
+  }
+
+  // _onBlur(e){
+  //   // console.log('remove class : '+ this.state.)
+  // }
 
   // Change state of input field so text is updated while typing
   _handleChangeName(e){
@@ -39,7 +53,7 @@ class Contact extends React.Component {
       contactEmail: e.target.value,
     });
   }
-  // Change state of input field so text is updated while typing
+  
   _handleChangeMsg(e) {
     this.setState({
       contactMessage: e.target.value
@@ -50,10 +64,10 @@ class Contact extends React.Component {
     
     e.preventDefault();
     this.setState({
-      contactName: '',
-      contactPhoneNum: '',
-      contactEmail: '',
-      contactMessage: ''
+      contactName: this.state.contactName,
+      contactPhoneNum: this.state.contactPhoneNum,
+      contactEmail: this.state.contactEmail,
+      contactMessage: this.state.contactMessage
     });
 
     // $.ajax({
@@ -97,52 +111,74 @@ class Contact extends React.Component {
     .then(data => {
       
       this.setState({
-        contactName: '',
-        contactPhoneNum: '',
-        contactEmail: 'success',
-        contactMessage: '문의가 접수되었습니다.'
+        contactName: this.state.contactName,
+        contactPhoneNum: this.state.contactPhoneNum,
+        contactEmail: this.state.contactEmail,
+        contactMessage: this.state.contactMessage,
+        classState: "active"
             });
       console.log('success', data);
     })
     .catch(e => {
-      console.log(e);
+
+      this.setState({
+        contactName: this.state.contactName,
+        contactPhoneNum: this.state.contactPhoneNum,
+        contactEmail: this.state.contactEmail,
+        contactMessage: this.state.contactMessage,
+        classState: "active"
+            });
+      console.log('error! : '+e);
     });
 
   }
   
   render() {
+    let checkFocus = this.state.focusedForm;
+      
+    
+    
+
+    console.log('onFocus: '+ this.state.focusedForm);
     return (
       <div className={cx('contact_form')} id="contact">
-        
+          <div className={cx('mail_ok',this.state.classState)}>
+            <h1>문의 접수 완료!</h1>
+            <span>  
+              문의 주셔서 감사합니다. <br />
+              담당자가 확인 후 빠른 시일 내에<br />
+              답변 드리겠습니다. 
+            </span>
+          </div>
           <form className="form" onSubmit={this._handleSubmit} id="formContact">
             
                 
-              <div className={cx('input_frame')}>
-              <input id="formName" type="text" name="formName" value={this.state.contactName} onChange={this._handleChangeName} required/>
+            <div className={cx('input_frame',(checkFocus==="formName")?'focused':'')}>
+              <input id="formName" type="text" name="formName" value={this.state.contactName} onChange={this._handleChangeName} onFocus={this._onFocus} required/>
               <div className={cx('place_holder')}>
                 Name
               </div>
               <div className={cx('form_border_bottom')}></div>
             </div>
               
-            <div className={cx('input_frame')}>
-            <input id="formPhone" type="tel" name="formPhone" value={this.state.contactPhoneNum} onChange={this._handleChangePhone} required/>
-              <div className={cx('place_holder')}>
-                Phone Number
-              </div>
-              <div className={cx('form_border_bottom')}></div>
+            <div className={cx('input_frame',(checkFocus==="formPhone")?'focused':'')}>
+              <input id="formPhone" type="tel" name="formPhone" value={this.state.contactPhoneNum} onChange={this._handleChangePhone} onFocus={this._onFocus} required/>
+                <div className={cx('place_holder')}>
+                  Phone Number
+                </div>
+                <div className={cx('form_border_bottom')}></div>
             </div>
 
-            <div className={cx('input_frame')}>
-              <input id="formEmail" type="email" name="formEmail" value={this.state.contactEmail} onChange={this._handleChangeEmail} required/>
+            <div className={cx('input_frame',(checkFocus==="formEmail")?'focused':'')}>
+              <input id="formEmail" type="email" name="formEmail" value={this.state.contactEmail} onChange={this._handleChangeEmail} onFocus={this._onFocus} required/>
               <div className={cx('place_holder')}>
                 E-mail
               </div>
               <div className={cx('form_border_bottom')}></div>
             </div>
 
-            <div className={cx('input_frame')}>
-              <textarea id="formMsg" name="formMsg" rows="6" cols="40" placeholder="문의내용을 입력해 주세요." value={this.state.contactMessage} onChange={this._handleChangeMsg} required></textarea>
+            <div className={cx('input_frame',(checkFocus==="formMsg")?'focused':'')}>
+              <textarea id="formMsg" name="formMsg" rows="6" cols="40" placeholder="문의내용을 입력해 주세요." value={this.state.contactMessage} onFocus={this._onFocus} onChange={this._handleChangeMsg} required></textarea>
               {/* <span><button>작성 완료</button></span> */}
               <input type="submit" value="문의 하기" className={cx('btn_submit')} id="btn-submit" />
             </div>

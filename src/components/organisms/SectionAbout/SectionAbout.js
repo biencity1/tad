@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SectionAbout.scss';
 import classNames from 'classnames/bind';
-import ScrollableAnchor,{ goToTop } from 'react-scrollable-anchor';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 
 const cx = classNames.bind(styles);
