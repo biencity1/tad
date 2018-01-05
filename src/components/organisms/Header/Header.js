@@ -40,8 +40,6 @@ class Header extends Component {
               <li><a href="/#partners">Partners</a></li>
               <li><a href="/#portfolio">Portfolio</a></li>
               <li><a href="/#contact">Contact</a></li>
-              
-              
             </ul>
           </div>
           <div className={cx('nav_btn',this.state.isMobileMenuOpen)} onClick={this.toggleMobileMenu.bind(this)}>
@@ -52,9 +50,6 @@ class Header extends Component {
           
         </div>
         
-        <a href="/#" onClick={goToTop} className={cx('gotoTop')}>
-          <div> TOP </div>
-        </a>
         
       
       </div>
